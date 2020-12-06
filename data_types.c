@@ -63,5 +63,12 @@ int main() {
     printf("中: %d\n", zh);
     printf("中: %d\n", zh_hex);
 
+    float f = 3.14f;
+    double d = 3.1415926;
+    printf("size of float: %lu\n", sizeof(float));
+    printf("size of double: %lu\n", sizeof(double));
+    printf("float 3.14f - f = %f\n", 3.14f - f);
+    printf("double 3.14 - d = %f\n", 3.1415927 - d);
+
     return 0;
 }
