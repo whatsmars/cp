@@ -8,10 +8,21 @@
 void println(void);
 int getMoney(int);
 
+void localStaticVar() {
+    static int static_var;
+    auto int non_static_var = 0;
+    printf("static var: %d\n", static_var++);
+    printf("non static var: %d\n", non_static_var++);
+}
+
 int main() {
     int money = getMoney(2);
     printf("money: %d", money);
     println();
+
+    localStaticVar();
+    localStaticVar();
+    localStaticVar();
     return 0;
 }
 
