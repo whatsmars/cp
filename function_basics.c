@@ -2,7 +2,7 @@
 // Created by javahongxi on 2020/12/9.
 //
 
-#include "stdio.h"
+#include <stdio.h>
 
 // 函数定义在调用者之后，需在前面声明
 void println(void);
