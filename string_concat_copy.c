@@ -1,0 +1,15 @@
+//
+// Created by javahongxi on 2020/12/15.
+//
+
+#include <io_utils.h>
+#include <string.h>
+
+int main() {
+    char src[] = "HelloWorld";
+    char dest[20] = "C said: ";
+    //strcat(dest, src);
+    strcpy(dest + strlen(dest), src);
+    puts(dest);
+    return 0;
+}
