@@ -5,6 +5,8 @@
 #ifndef CHAPTER10_INCLUDE_TIME_UTILS_H_
 #define CHAPTER10_INCLUDE_TIME_UTILS_H_
 
+#include <io_utils.h>
+
 #if defined(_WIN32)
 #include <sys/timeb.h>
 #elif defined(__unix__) || defined(__APPLE__)
@@ -39,6 +41,12 @@ void TimeCost(char const* msg) {
         PRINTLNF("%s costs: %lld", msg, current_time - start_time);
     }
     start_time = TimeInMillisecond();
+}
+
+void SleepMs(long milliseconds) {
+    long seconds = milliseconds / 1000;
+    long nanoseconds = (milliseconds % 1000) * 1000000L;
+    thrd_sleep(&(struct timespec) {.tv_sec=seconds, .tv_nsec=nanoseconds}, NULL);
 }
 
 #endif //CHAPTER10_INCLUDE_TIME_UTILS_H_
