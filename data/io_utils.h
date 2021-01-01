@@ -1,18 +1,12 @@
-//
-// Created by javahongxi on 2020/12/12.
-//
-
 #ifndef BASICC_IO_UTILS_IO_UTILS_H_
 #define BASICC_IO_UTILS_IO_UTILS_H_
 
 #include <stdio.h>
 #include <limits.h>
-#include <errno.h>
-#include <string.h>
 
 void PrintBinary(unsigned int value);
 
-//#define PRINT_METADATA
+#define PRINT_METADATA
 #ifdef PRINT_METADATA
 # define PRINTLNF(format, ...) printf("("__FILE__":%d) %s: "format"\n", __LINE__, __FUNCTION__ , ##__VA_ARGS__)
 #else
@@ -46,11 +40,5 @@ for (i = 0; i < length; ++i) { \
 #define PRINT_INT_ARRAY(array, length) PRINT_ARRAY("%d, ", array, length)
 #define PRINT_CHAR_ARRAY(array, length) PRINT_ARRAY("%c, ", array, length)
 #define PRINT_DOUBLE_ARRAY(array, length) PRINT_ARRAY("%g, ", array, length)
-
-#define PRINT_IF_ERROR(format, ...) \
-if (errno != 0) { \
-  fprintf(stderr, format, ##__VA_ARGS__); \
-  fprintf(stderr, ": %s\n", strerror(errno)); \
-}
 
 #endif //BASICC_IO_UTILS_IO_UTILS_H_
