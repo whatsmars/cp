@@ -5,7 +5,7 @@
 | -------- | -------------- |
 | basics   | C语言快速入门  |
 | function | 函数与程序结构 |
-| macro    | 函数与程序结构 |
+| macro    | 预编译与宏 |
 | array    | 玩转数组       |
 | pointer  | 吃透指针       |
 | struct   | 聚合数据类型   |
