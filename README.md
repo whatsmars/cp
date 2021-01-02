@@ -13,3 +13,5 @@
 | time     | 时间的应用     |
 | file_io  | 文件的输入输出 |
 | thread   | 线程与并发     |
+
+&copy; [hongxi.org](http://hongxi.org) | [c.hongxi.org](http://c.hongxi.org)
