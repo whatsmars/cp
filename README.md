@@ -14,4 +14,4 @@ C语言系统化精讲
 | file_io  | 文件的输入输出 |
 | thread   | 线程与并发     |
 
-&copy; [hongxi.org](http://hongxi.org) | [c.hongxi.org](http://c.hongxi.org)
+&copy; [hongxi.org](http://hongxi.org)
